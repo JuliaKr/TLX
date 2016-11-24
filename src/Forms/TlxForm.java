@@ -34,6 +34,37 @@ public class TlxForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jSlider1 = new javax.swing.JSlider();
         jLabel1 = new javax.swing.JLabel();
@@ -57,7 +88,105 @@ public class TlxForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setLayout(new java.awt.GridLayout(5, 6, 2, 4));
+
+        jButton1.setText("jButton1");
+        jPanel1.add(jButton1);
+
+        jButton2.setText("jButton2");
+        jPanel1.add(jButton2);
+
+        jButton6.setText("jButton6");
+        jPanel1.add(jButton6);
+
+        jButton11.setText("jButton11");
+        jPanel1.add(jButton11);
+
+        jButton10.setText("jButton10");
+        jPanel1.add(jButton10);
+
+        jButton16.setText("jButton16");
+        jPanel1.add(jButton16);
+
+        jButton15.setText("jButton15");
+        jPanel1.add(jButton15);
+
+        jButton19.setText("jButton19");
+        jPanel1.add(jButton19);
+
+        jButton18.setText("jButton18");
+        jPanel1.add(jButton18);
+
+        jButton17.setText("jButton17");
+        jPanel1.add(jButton17);
+
+        jButton13.setText("jButton13");
+        jPanel1.add(jButton13);
+
+        jButton14.setText("jButton14");
+        jPanel1.add(jButton14);
+
+        jButton12.setText("jButton12");
+        jPanel1.add(jButton12);
+
+        jButton9.setText("jButton9");
+        jPanel1.add(jButton9);
+
+        jButton3.setText("jButton3");
+        jPanel1.add(jButton3);
+
+        jButton8.setText("jButton8");
+        jPanel1.add(jButton8);
+
+        jButton7.setText("jButton7");
+        jPanel1.add(jButton7);
+
+        jButton4.setText("jButton4");
+        jPanel1.add(jButton4);
+
+        jButton5.setText("jButton5");
+        jPanel1.add(jButton5);
+
+        jButton20.setText("jButton14");
+        jButton20.setMaximumSize(new java.awt.Dimension(50, 23));
+        jButton20.setMinimumSize(new java.awt.Dimension(50, 23));
+        jButton20.setPreferredSize(new java.awt.Dimension(50, 23));
+        jButton20.setRequestFocusEnabled(false);
+        jPanel1.add(jButton20);
+
+        jButton21.setText("jButton8");
+        jPanel1.add(jButton21);
+
+        jButton23.setText("jButton8");
+        jPanel1.add(jButton23);
+
+        jButton24.setText("jButton14");
+        jPanel1.add(jButton24);
+
+        jButton25.setText("jButton8");
+        jPanel1.add(jButton25);
+
+        jButton26.setText("jButton14");
+        jPanel1.add(jButton26);
+
+        jButton27.setText("jButton8");
+        jPanel1.add(jButton27);
+
+        jButton28.setText("jButton14");
+        jPanel1.add(jButton28);
+
+        jButton22.setText("jButton14");
+        jPanel1.add(jButton22);
+
+        jButton29.setText("jButton8");
+        jPanel1.add(jButton29);
+
+        jButton30.setText("jButton30");
+        jPanel1.add(jButton30);
+
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Forms/String_values"); // NOI18N
+        jTabbedPane1.addTab(bundle.getString("tab_compare"), jPanel1); // NOI18N
+
         jLabel1.setText(bundle.getString("label_MD")); // NOI18N
 
         jLabel2.setText(bundle.getString("label_PD")); // NOI18N
@@ -119,7 +248,7 @@ public class TlxForm extends javax.swing.JFrame {
                         .addComponent(jSlider8, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel14)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +298,7 @@ public class TlxForm extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 484, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,10 +315,12 @@ public class TlxForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName(bundle.getString("tab_compair")); // NOI18N
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -231,6 +362,36 @@ public class TlxForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -243,6 +404,7 @@ public class TlxForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSlider jSlider1;
