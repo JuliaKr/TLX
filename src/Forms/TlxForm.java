@@ -35,36 +35,39 @@ public class TlxForm extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
+        jButton35 = new javax.swing.JButton();
+        jButton36 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
+        jButton38 = new javax.swing.JButton();
+        jButton39 = new javax.swing.JButton();
+        jButton40 = new javax.swing.JButton();
+        jButton41 = new javax.swing.JButton();
+        jButton42 = new javax.swing.JButton();
+        jButton43 = new javax.swing.JButton();
+        jButton44 = new javax.swing.JButton();
+        jButton45 = new javax.swing.JButton();
+        jButton46 = new javax.swing.JButton();
+        jButton47 = new javax.swing.JButton();
+        jButton48 = new javax.swing.JButton();
+        jButton49 = new javax.swing.JButton();
+        jButton50 = new javax.swing.JButton();
+        jButton51 = new javax.swing.JButton();
+        jButton52 = new javax.swing.JButton();
+        jButton53 = new javax.swing.JButton();
+        jButton54 = new javax.swing.JButton();
+        jButton55 = new javax.swing.JButton();
+        jButton56 = new javax.swing.JButton();
+        jButton57 = new javax.swing.JButton();
+        jButton58 = new javax.swing.JButton();
+        jButton59 = new javax.swing.JButton();
+        jButton60 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         jSlider1 = new javax.swing.JSlider();
         jLabel1 = new javax.swing.JLabel();
@@ -84,107 +87,149 @@ public class TlxForm extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(new java.awt.GridLayout(5, 6, 2, 4));
-
-        jButton1.setText("jButton1");
-        jPanel1.add(jButton1);
-
-        jButton2.setText("jButton2");
-        jPanel1.add(jButton2);
-
-        jButton6.setText("jButton6");
-        jPanel1.add(jButton6);
-
-        jButton11.setText("jButton11");
-        jPanel1.add(jButton11);
-
-        jButton10.setText("jButton10");
-        jPanel1.add(jButton10);
-
-        jButton16.setText("jButton16");
-        jPanel1.add(jButton16);
-
-        jButton15.setText("jButton15");
-        jPanel1.add(jButton15);
-
-        jButton19.setText("jButton19");
-        jPanel1.add(jButton19);
-
-        jButton18.setText("jButton18");
-        jPanel1.add(jButton18);
-
-        jButton17.setText("jButton17");
-        jPanel1.add(jButton17);
-
-        jButton13.setText("jButton13");
-        jPanel1.add(jButton13);
-
-        jButton14.setText("jButton14");
-        jPanel1.add(jButton14);
-
-        jButton12.setText("jButton12");
-        jPanel1.add(jButton12);
-
-        jButton9.setText("jButton9");
-        jPanel1.add(jButton9);
-
-        jButton3.setText("jButton3");
-        jPanel1.add(jButton3);
-
-        jButton8.setText("jButton8");
-        jPanel1.add(jButton8);
-
-        jButton7.setText("jButton7");
-        jPanel1.add(jButton7);
-
-        jButton4.setText("jButton4");
-        jPanel1.add(jButton4);
-
-        jButton5.setText("jButton5");
-        jPanel1.add(jButton5);
-
-        jButton20.setText("jButton14");
-        jButton20.setMaximumSize(new java.awt.Dimension(50, 23));
-        jButton20.setMinimumSize(new java.awt.Dimension(50, 23));
-        jButton20.setPreferredSize(new java.awt.Dimension(50, 23));
-        jButton20.setRequestFocusEnabled(false);
-        jPanel1.add(jButton20);
-
-        jButton21.setText("jButton8");
-        jPanel1.add(jButton21);
-
-        jButton23.setText("jButton8");
-        jPanel1.add(jButton23);
-
-        jButton24.setText("jButton14");
-        jPanel1.add(jButton24);
-
-        jButton25.setText("jButton8");
-        jPanel1.add(jButton25);
-
-        jButton26.setText("jButton14");
-        jPanel1.add(jButton26);
-
-        jButton27.setText("jButton8");
-        jPanel1.add(jButton27);
-
-        jButton28.setText("jButton14");
-        jPanel1.add(jButton28);
-
-        jButton22.setText("jButton14");
-        jPanel1.add(jButton22);
-
-        jButton29.setText("jButton8");
-        jPanel1.add(jButton29);
-
-        jButton30.setText("jButton30");
-        jPanel1.add(jButton30);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Forms/String_values"); // NOI18N
+        jButton31.setText(bundle.getString("button_MD")); // NOI18N
+        jButton31.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 60, -1));
+
+        jButton32.setText(bundle.getString("button_PD")); // NOI18N
+        jButton32.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 60, -1));
+
+        jButton33.setText(bundle.getString("button_TD")); // NOI18N
+        jButton33.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 60, -1));
+
+        jButton34.setText(bundle.getString("button_MD")); // NOI18N
+        jButton34.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 60, -1));
+
+        jButton35.setText(bundle.getString("button_OP")); // NOI18N
+        jButton35.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 60, -1));
+
+        jButton36.setText(bundle.getString("button_MD")); // NOI18N
+        jButton36.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 60, -1));
+
+        jButton37.setText(bundle.getString("button_FR")); // NOI18N
+        jButton37.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 60, -1));
+
+        jButton38.setText(bundle.getString("button_MD")); // NOI18N
+        jButton38.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 60, -1));
+
+        jButton39.setText(bundle.getString("button_EF")); // NOI18N
+        jButton39.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 60, -1));
+
+        jButton40.setText(bundle.getString("button_MD")); // NOI18N
+        jButton40.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 60, -1));
+
+        jButton41.setText(bundle.getString("button_TD")); // NOI18N
+        jButton41.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 60, -1));
+
+        jButton42.setText(bundle.getString("button_PD")); // NOI18N
+        jButton42.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 60, -1));
+
+        jButton43.setText(bundle.getString("button_OP")); // NOI18N
+        jButton43.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 60, -1));
+
+        jButton44.setText(bundle.getString("button_PD")); // NOI18N
+        jButton44.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 60, -1));
+
+        jButton45.setText(bundle.getString("button_FR")); // NOI18N
+        jButton45.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 60, -1));
+
+        jButton46.setText(bundle.getString("button_PD")); // NOI18N
+        jButton46.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 60, -1));
+
+        jButton47.setText(bundle.getString("button_EF")); // NOI18N
+        jButton47.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 60, -1));
+
+        jButton48.setText(bundle.getString("button_PD")); // NOI18N
+        jButton48.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 60, -1));
+
+        jButton49.setText(bundle.getString("button_TD")); // NOI18N
+        jButton49.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 60, -1));
+
+        jButton50.setText(bundle.getString("button_OP")); // NOI18N
+        jButton50.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 60, -1));
+
+        jButton51.setText(bundle.getString("button_TD")); // NOI18N
+        jButton51.setPreferredSize(new java.awt.Dimension(45, 45));
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton51ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 60, -1));
+
+        jButton52.setText(bundle.getString("button_FR")); // NOI18N
+        jButton52.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 60, -1));
+
+        jButton53.setText(bundle.getString("button_TD")); // NOI18N
+        jButton53.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 60, -1));
+
+        jButton54.setText(bundle.getString("button_EF")); // NOI18N
+        jButton54.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 60, -1));
+
+        jButton55.setText(bundle.getString("button_PD")); // NOI18N
+        jButton55.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 60, -1));
+
+        jButton56.setText(bundle.getString("button_FR")); // NOI18N
+        jButton56.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 60, -1));
+
+        jButton57.setText(bundle.getString("button_OP")); // NOI18N
+        jButton57.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 60, -1));
+
+        jButton58.setText(bundle.getString("button_EF")); // NOI18N
+        jButton58.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 60, -1));
+
+        jButton59.setText(bundle.getString("button_EF")); // NOI18N
+        jButton59.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 60, -1));
+
+        jButton60.setText(bundle.getString("button_FR")); // NOI18N
+        jButton60.setPreferredSize(new java.awt.Dimension(45, 45));
+        jPanel1.add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 60, -1));
+
+        jLabel5.setBackground(new java.awt.Color(220, 220, 220));
+        jLabel5.setText("jLabel5");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 420, 50));
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 20, 290));
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 20, 290));
+
         jTabbedPane1.addTab(bundle.getString("tab_compare"), jPanel1); // NOI18N
 
         jLabel1.setText(bundle.getString("label_MD")); // NOI18N
@@ -211,13 +256,15 @@ public class TlxForm extends javax.swing.JFrame {
 
         jLabel14.setText(bundle.getString("start_state")); // NOI18N
 
+        jLabel6.setText("jLabel6");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -247,49 +294,52 @@ public class TlxForm extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jSlider8, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel14)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                        .addComponent(jLabel14))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSlider3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSlider4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSlider7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSlider8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab(bundle.getString("tab_question"), jPanel3); // NOI18N
@@ -298,7 +348,7 @@ public class TlxForm extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
+            .addGap(0, 464, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,6 +374,10 @@ public class TlxForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton51ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -362,36 +416,36 @@ public class TlxForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton37;
+    private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
+    private javax.swing.JButton jButton40;
+    private javax.swing.JButton jButton41;
+    private javax.swing.JButton jButton42;
+    private javax.swing.JButton jButton43;
+    private javax.swing.JButton jButton44;
+    private javax.swing.JButton jButton45;
+    private javax.swing.JButton jButton46;
+    private javax.swing.JButton jButton47;
+    private javax.swing.JButton jButton48;
+    private javax.swing.JButton jButton49;
+    private javax.swing.JButton jButton50;
+    private javax.swing.JButton jButton51;
+    private javax.swing.JButton jButton52;
+    private javax.swing.JButton jButton53;
+    private javax.swing.JButton jButton54;
+    private javax.swing.JButton jButton55;
+    private javax.swing.JButton jButton56;
+    private javax.swing.JButton jButton57;
+    private javax.swing.JButton jButton58;
+    private javax.swing.JButton jButton59;
+    private javax.swing.JButton jButton60;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -401,12 +455,16 @@ public class TlxForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider2;
     private javax.swing.JSlider jSlider3;
