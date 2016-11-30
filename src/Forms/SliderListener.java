@@ -5,6 +5,7 @@
  */
 package Forms;
 
+import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
@@ -14,20 +15,20 @@ import javax.swing.event.ChangeListener;
  *
  * @author Julia
  */
-public class FormListener implements ChangeListener{
+public class SliderListener implements ChangeListener{
     
-    private TlxForm tlxForm;
+    private List<TLXElement> tlxElements;
     /*--- Singelton --------------------------*/
-    private static FormListener instance;
+    private static SliderListener instance;
     
-    public static FormListener getInstance (TlxForm tlxForm) {
-        if (FormListener.instance == null) {
-          FormListener.instance = new FormListener(tlxForm);
+    public static SliderListener getInstance (List<TLXElement> tlxElements) {
+        if (SliderListener.instance == null) {
+          SliderListener.instance = new SliderListener(tlxElements);
         }
-        return FormListener.instance;
+        return SliderListener.instance;
     }
-    private FormListener(TlxForm tlxForm){     
-        this.tlxForm = tlxForm;
+    private SliderListener(List<TLXElement> tlxElements){     
+        this.tlxElements = tlxElements;
     }
     /*-----------------------------------------*/
     
@@ -36,10 +37,13 @@ public class FormListener implements ChangeListener{
     public void stateChanged(ChangeEvent e) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         JSlider slider = (JSlider)e.getSource();
-        JLabel label = new JLabel();
         int value = (int)slider.getValue();
-        label = tlxForm.getSliderLabel(slider);
-        tlxForm.setLabeltext(label, value + " %");
-     
+        
+        for(TLXElement elem : tlxElements){
+            if(elem.getSlider() == slider){
+                elem.setSliderLabeltext(value + " %");
+                break;
+            }
+        }
     }
 }

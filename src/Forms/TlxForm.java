@@ -7,6 +7,8 @@ package Forms;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JSlider;
 
 /**
@@ -21,7 +23,8 @@ public class TlxForm extends javax.swing.JFrame {
     public TlxForm() {
         initComponents();
         setChangeListener();
-        getSliderLabelList();
+        fillTLXElementList();
+        doButtonGroups();
     }
 
     /**
@@ -231,6 +234,7 @@ public class TlxForm extends javax.swing.JFrame {
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 20, 290));
 
         jTabbedPane1.addTab(bundle.getString("tab_compare"), jPanel1); // NOI18N
+        jPanel1.getAccessibleContext().setAccessibleName(bundle.getString("tab_compare")); // NOI18N
 
         jLabel1.setText(bundle.getString("label_MD")); // NOI18N
 
@@ -474,62 +478,112 @@ public class TlxForm extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 
-    //private ArrayList[][] sliderList = new ArrayList[5][1];
+    private List<TLXButtonGroup> buttonGroups = new ArrayList<TLXButtonGroup>();
+    private List<TLXElement> tlxElements = new ArrayList<TLXElement>();
     
     private void setChangeListener(){
-        FormListener listener = FormListener.getInstance(this);
+        SliderListener listener = SliderListener.getInstance(tlxElements);
         jSlider1.addChangeListener(listener);
         jSlider2.addChangeListener(listener);
         jSlider3.addChangeListener(listener);
         jSlider4.addChangeListener(listener);
         jSlider7.addChangeListener(listener);
         jSlider8.addChangeListener(listener);
+        
+        ButtonListener buttonListener = ButtonListener.getInstance(buttonGroups, tlxElements);
+        jButton31.addActionListener(buttonListener);
+        jButton32.addActionListener(buttonListener);
+        jButton33.addActionListener(buttonListener);
+        jButton34.addActionListener(buttonListener);
+        jButton35.addActionListener(buttonListener);
+        jButton36.addActionListener(buttonListener);
+        jButton37.addActionListener(buttonListener);
+        jButton38.addActionListener(buttonListener);
+        jButton39.addActionListener(buttonListener);
+        jButton40.addActionListener(buttonListener);
+        jButton41.addActionListener(buttonListener);
+        jButton42.addActionListener(buttonListener);
+        jButton43.addActionListener(buttonListener);
+        jButton44.addActionListener(buttonListener);
+        jButton45.addActionListener(buttonListener);
+        jButton46.addActionListener(buttonListener);
+        jButton47.addActionListener(buttonListener);
+        jButton48.addActionListener(buttonListener);
+        jButton49.addActionListener(buttonListener);
+        jButton50.addActionListener(buttonListener);
+        jButton51.addActionListener(buttonListener);
+        jButton52.addActionListener(buttonListener);
+        jButton53.addActionListener(buttonListener);
+        jButton54.addActionListener(buttonListener);
+        jButton55.addActionListener(buttonListener);
+        jButton56.addActionListener(buttonListener);
+        jButton57.addActionListener(buttonListener);
+        jButton58.addActionListener(buttonListener);
+        jButton59.addActionListener(buttonListener);
+        jButton60.addActionListener(buttonListener);
+        
     }
     
-    private void getSliderLabelList(){
-      
-    /*
-        sliderList[0][0].add(jSlider1);
-        sliderList[0][1].add(jLabel9);
+    private void fillTLXElementList(){
+        /*
+        the List contains all TLXElements
+        the TLXElements keeps all Formeelements of each part together
+        */
+        TLXElement md = new TLXElement(jSlider1, jLabel9, "md");
+        TLXElement pd = new TLXElement(jSlider2, jLabel10, "pd");
+        TLXElement td = new TLXElement(jSlider3, jLabel12, "td");
+        TLXElement op = new TLXElement(jSlider4, jLabel11, "op");
+        TLXElement ef = new TLXElement(jSlider7, jLabel13, "ef");
+        TLXElement fr = new TLXElement(jSlider8, jLabel14, "fr");
         
-        sliderList[0][0].add(jSlider2);
-        sliderList[0][1].add(jLabel10);
-        
-        sliderList[0][0].add(jSlider3);
-        sliderList[0][1].add(jLabel12);
-        
-        sliderList[0][0].add(jSlider4);
-        sliderList[0][1].add(jLabel11);
-        
-        sliderList[0][0].add(jSlider7);
-        sliderList[0][1].add(jLabel13);
-        
-        sliderList[0][0].add(jSlider8);
-        sliderList[0][1].add(jLabel14);
-    */
-    }
+        tlxElements.add(md);
+        tlxElements.add(pd);
+        tlxElements.add(td);
+        tlxElements.add(op);
+        tlxElements.add(ef);
+        tlxElements.add(fr);
+    }  
     
-    public javax.swing.JLabel getSliderLabel(javax.swing.JSlider slider){
-        javax.swing.JLabel label = jLabel9;
+    private void doButtonGroups(){
+        /*
+        contains all 2-pair-Button-Groups for the "Pair-wise comparisons"-Panal
+        thats importent that the user can only chouse one button of each group
+        */
+        TLXButtonGroup group11 = new TLXButtonGroup(jButton31, jButton32);
+        TLXButtonGroup group12 = new TLXButtonGroup(jButton33, jButton34);
+        TLXButtonGroup group13 = new TLXButtonGroup(jButton35, jButton36);
+        TLXButtonGroup group14 = new TLXButtonGroup(jButton37, jButton38);
+        TLXButtonGroup group15 = new TLXButtonGroup(jButton39, jButton40);
         
-        if(slider == jSlider1){
-            label = jLabel9;
-        }else if(slider == jSlider2){
-            label = jLabel10;
-        }else if(slider == jSlider3){
-            label = jLabel12;
-        }else if(slider == jSlider4){
-            label = jLabel11;
-        }else if(slider == jSlider7){
-            label = jLabel13;
-        }else if(slider == jSlider8){
-            label = jLabel14;
-        }
+        TLXButtonGroup group21 = new TLXButtonGroup(jButton41, jButton42);
+        TLXButtonGroup group22 = new TLXButtonGroup(jButton43, jButton44);
+        TLXButtonGroup group23 = new TLXButtonGroup(jButton45, jButton46);
+        TLXButtonGroup group24 = new TLXButtonGroup(jButton47, jButton48);
+        TLXButtonGroup group25 = new TLXButtonGroup(jButton49, jButton50);
         
-    return label;
+        TLXButtonGroup group31 = new TLXButtonGroup(jButton51, jButton52);
+        TLXButtonGroup group32 = new TLXButtonGroup(jButton53, jButton54);
+        TLXButtonGroup group33 = new TLXButtonGroup(jButton55, jButton56);
+        TLXButtonGroup group34 = new TLXButtonGroup(jButton57, jButton58);
+        TLXButtonGroup group35 = new TLXButtonGroup(jButton59, jButton60);
+
+        buttonGroups.add(group11);
+        buttonGroups.add(group12);
+        buttonGroups.add(group13);
+        buttonGroups.add(group14);
+        buttonGroups.add(group15);
+        
+        buttonGroups.add(group21);
+        buttonGroups.add(group22);
+        buttonGroups.add(group23);
+        buttonGroups.add(group24);
+        buttonGroups.add(group25);
+        
+        buttonGroups.add(group31);
+        buttonGroups.add(group32);
+        buttonGroups.add(group33);
+        buttonGroups.add(group34);
+        buttonGroups.add(group35);
     }
-    
-    public void setLabeltext(javax.swing.JLabel label, String text){
-        label.setText(text);
-    }
+            
 }
