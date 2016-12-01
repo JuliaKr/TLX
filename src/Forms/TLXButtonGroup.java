@@ -106,7 +106,7 @@ public class TLXButtonGroup {
         return null;
     }
     
-    public boolean isSelected(JButton button){
+    public boolean isNotSelected(JButton button){
         switch(getButtonNr(button)){
             case 1:
                 if(!button1Selected){

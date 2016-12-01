@@ -92,6 +92,9 @@ public class TlxForm extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,83 +103,83 @@ public class TlxForm extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Forms/String_values"); // NOI18N
         jButton31.setText(bundle.getString("button_MD")); // NOI18N
         jButton31.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 60, -1));
+        jPanel1.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 60, -1));
 
         jButton32.setText(bundle.getString("button_PD")); // NOI18N
         jButton32.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 60, -1));
+        jPanel1.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 60, -1));
 
         jButton33.setText(bundle.getString("button_TD")); // NOI18N
         jButton33.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 60, -1));
+        jPanel1.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 60, -1));
 
         jButton34.setText(bundle.getString("button_MD")); // NOI18N
         jButton34.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 60, -1));
+        jPanel1.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 60, -1));
 
         jButton35.setText(bundle.getString("button_OP")); // NOI18N
         jButton35.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 60, -1));
+        jPanel1.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 60, -1));
 
         jButton36.setText(bundle.getString("button_MD")); // NOI18N
         jButton36.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 60, -1));
+        jPanel1.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 60, -1));
 
         jButton37.setText(bundle.getString("button_FR")); // NOI18N
         jButton37.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 60, -1));
+        jPanel1.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 60, -1));
 
         jButton38.setText(bundle.getString("button_MD")); // NOI18N
         jButton38.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 60, -1));
+        jPanel1.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 60, -1));
 
         jButton39.setText(bundle.getString("button_EF")); // NOI18N
         jButton39.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 60, -1));
+        jPanel1.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 60, -1));
 
         jButton40.setText(bundle.getString("button_MD")); // NOI18N
         jButton40.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 60, -1));
+        jPanel1.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 60, -1));
 
         jButton41.setText(bundle.getString("button_TD")); // NOI18N
         jButton41.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 60, -1));
+        jPanel1.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 60, -1));
 
         jButton42.setText(bundle.getString("button_PD")); // NOI18N
         jButton42.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 60, -1));
+        jPanel1.add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 60, -1));
 
         jButton43.setText(bundle.getString("button_OP")); // NOI18N
         jButton43.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 60, -1));
+        jPanel1.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 60, -1));
 
         jButton44.setText(bundle.getString("button_PD")); // NOI18N
         jButton44.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 60, -1));
+        jPanel1.add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 60, -1));
 
         jButton45.setText(bundle.getString("button_FR")); // NOI18N
         jButton45.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 60, -1));
+        jPanel1.add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 60, -1));
 
         jButton46.setText(bundle.getString("button_PD")); // NOI18N
         jButton46.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 60, -1));
+        jPanel1.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 60, -1));
 
         jButton47.setText(bundle.getString("button_EF")); // NOI18N
         jButton47.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 60, -1));
+        jPanel1.add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 60, -1));
 
         jButton48.setText(bundle.getString("button_PD")); // NOI18N
         jButton48.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 60, -1));
+        jPanel1.add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 60, -1));
 
         jButton49.setText(bundle.getString("button_TD")); // NOI18N
         jButton49.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 60, -1));
+        jPanel1.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 60, -1));
 
         jButton50.setText(bundle.getString("button_OP")); // NOI18N
         jButton50.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 60, -1));
+        jPanel1.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 60, -1));
 
         jButton51.setText(bundle.getString("button_TD")); // NOI18N
         jButton51.setPreferredSize(new java.awt.Dimension(45, 45));
@@ -185,53 +188,53 @@ public class TlxForm extends javax.swing.JFrame {
                 jButton51ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 60, -1));
+        jPanel1.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 60, -1));
 
         jButton52.setText(bundle.getString("button_FR")); // NOI18N
         jButton52.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 60, -1));
+        jPanel1.add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 60, -1));
 
         jButton53.setText(bundle.getString("button_TD")); // NOI18N
         jButton53.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 60, -1));
+        jPanel1.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 60, -1));
 
         jButton54.setText(bundle.getString("button_EF")); // NOI18N
         jButton54.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 60, -1));
+        jPanel1.add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 60, -1));
 
         jButton55.setText(bundle.getString("button_PD")); // NOI18N
         jButton55.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 60, -1));
+        jPanel1.add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 60, -1));
 
         jButton56.setText(bundle.getString("button_FR")); // NOI18N
         jButton56.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 60, -1));
+        jPanel1.add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 60, -1));
 
         jButton57.setText(bundle.getString("button_OP")); // NOI18N
         jButton57.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 60, -1));
+        jPanel1.add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 60, -1));
 
         jButton58.setText(bundle.getString("button_EF")); // NOI18N
         jButton58.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 60, -1));
+        jPanel1.add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 60, -1));
 
         jButton59.setText(bundle.getString("button_EF")); // NOI18N
         jButton59.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 60, -1));
+        jPanel1.add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 60, -1));
 
         jButton60.setText(bundle.getString("button_FR")); // NOI18N
         jButton60.setPreferredSize(new java.awt.Dimension(45, 45));
-        jPanel1.add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 60, -1));
+        jPanel1.add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 60, -1));
 
         jLabel5.setBackground(new java.awt.Color(220, 220, 220));
         jLabel5.setText("jLabel5");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 420, 50));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 20, 290));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 20, 290));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 20, 290));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 20, 290));
 
         jTabbedPane1.addTab(bundle.getString("tab_compare"), jPanel1); // NOI18N
         jPanel1.getAccessibleContext().setAccessibleName(bundle.getString("tab_compare")); // NOI18N
@@ -306,7 +309,7 @@ public class TlxForm extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -348,30 +351,52 @@ public class TlxForm extends javax.swing.JFrame {
 
         jTabbedPane1.addTab(bundle.getString("tab_question"), jPanel3); // NOI18N
 
+        jButton2.setText(bundle.getString("button_Analyse")); // NOI18N
+
+        jButton3.setText(bundle.getString("button_Analyse")); // NOI18N
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 464, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(193, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 414, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(351, 351, 351)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab(bundle.getString("tab_analyze"), jPanel4); // NOI18N
+
+        jButton1.setText(bundle.getString("button_Analyse")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName(bundle.getString("tab_compair")); // NOI18N
@@ -420,6 +445,9 @@ public class TlxForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
