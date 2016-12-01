@@ -40,6 +40,14 @@ public class TLXButtonGroup {
         }
     }
     
+    public boolean hasSelectedButton(){
+        if(button1Selected || button2Selected){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
     public int getButtonNr(JButton button){
        if(button == button1){
             return 1;
@@ -50,12 +58,12 @@ public class TLXButtonGroup {
         }
     }
     
+    //Löschen?
     public boolean isSelectionChange(int newSelectedButtonNr){
         /*
         true: before the other button was selected
         false: there wasn't any selection before
         */
-        //TODO: hier liegt irgendwo ein Logikfehler
         switch(newSelectedButtonNr){
             case 1:
                 //the newSelectedButtonNr -> button1
@@ -72,7 +80,7 @@ public class TLXButtonGroup {
         }
         return false;
     }
-    
+   
     public void selectButton(int buttonNr){
         switch (buttonNr){
             case 1: 
@@ -96,7 +104,9 @@ public class TLXButtonGroup {
         
     }
     
+    //TODO: macht das sinn?
     public JButton getUnselectedButton(int selectedButtonNr){
+        
         switch (selectedButtonNr){
             case 1: 
                 return button2;
@@ -106,15 +116,23 @@ public class TLXButtonGroup {
         return null;
     }
     
-    public boolean isNotSelected(JButton button){
+    public JButton getSelectedButton(){
+        if(button1Selected){
+            return button1;
+        }else{
+            return button2;
+        }
+    }
+    
+    public boolean isSelected(JButton button){
         switch(getButtonNr(button)){
             case 1:
-                if(!button1Selected){
+                if(button1Selected){
                   return true;
                 }
                 break;
             case 2:
-                if(!button2Selected){
+                if(button2Selected){
                     return true;
                 }
                 break;

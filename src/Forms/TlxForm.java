@@ -518,7 +518,7 @@ public class TlxForm extends javax.swing.JFrame {
         jSlider7.addChangeListener(listener);
         jSlider8.addChangeListener(listener);
         
-        ButtonListener buttonListener = ButtonListener.getInstance(buttonGroups, tlxElements);
+        ComparButtonListener buttonListener = ComparButtonListener.getInstance(buttonGroups);
         jButton31.addActionListener(buttonListener);
         jButton32.addActionListener(buttonListener);
         jButton33.addActionListener(buttonListener);
@@ -550,6 +550,8 @@ public class TlxForm extends javax.swing.JFrame {
         jButton59.addActionListener(buttonListener);
         jButton60.addActionListener(buttonListener);
         
+        AnalyseButtonListener aButtonListener = AnalyseButtonListener.getInstance(buttonGroups, tlxElements);
+        jButton1.addActionListener(aButtonListener);
     }
     
     private void fillTLXElementList(){

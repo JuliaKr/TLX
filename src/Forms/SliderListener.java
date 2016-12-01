@@ -41,7 +41,7 @@ public class SliderListener implements ChangeListener{
         
         for(TLXElement elem : tlxElements){
             if(elem.getSlider() == slider){
-                elem.setSliderLabeltext(value + " %");
+                elem.setSliderValue(value);
                 break;
             }
         }

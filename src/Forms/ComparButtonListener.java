@@ -22,22 +22,20 @@ import javax.swing.event.ChangeListener;
  *
  * @author Julia
  */
-public class ButtonListener implements ActionListener{
+public class ComparButtonListener implements ActionListener{
 
     private List<TLXButtonGroup> buttonGroups;
-    private List<TLXElement> tlxElements;
     /*--- Singelton --------------------------*/
-    private static ButtonListener instance;
+    private static ComparButtonListener instance;
     
-    public static ButtonListener getInstance (List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements) {
-        if (ButtonListener.instance == null) {
-          ButtonListener.instance = new ButtonListener(buttonGroups, tlxElements);
+    public static ComparButtonListener getInstance (List<TLXButtonGroup> buttonGroups) {
+        if (ComparButtonListener.instance == null) {
+          ComparButtonListener.instance = new ComparButtonListener(buttonGroups);
         }
-        return ButtonListener.instance;
+        return ComparButtonListener.instance;
     }
-    private ButtonListener(List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements){  
+    private ComparButtonListener(List<TLXButtonGroup> buttonGroups){  
         this.buttonGroups = buttonGroups;
-        this.tlxElements = tlxElements;
 
     }
     /*-----------------------------------------*/
@@ -47,11 +45,9 @@ public class ButtonListener implements ActionListener{
         JButton button = (JButton)e.getSource();
         for(TLXButtonGroup buttonGroup : buttonGroups){
             if(buttonGroup.groupContainsButton(button)){
-                if(buttonGroup.isNotSelected(button)){
                     int buttonNr = buttonGroup.getButtonNr(button);
                     buttonGroup.selectButton(buttonNr);
                     break;
-                }
             }
         }
     }

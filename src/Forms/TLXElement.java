@@ -19,6 +19,7 @@ public class TLXElement {
     private String elementName;
     //the Pair-wise comparisons of factors:
     private int counter;
+    private int slidervalue;
     
     public TLXElement(JSlider slider, JLabel sliderLabel, String name){
         this.jSlider = slider;
@@ -29,15 +30,16 @@ public class TLXElement {
     
     public void addCounter(){
         counter++;
-        System.out.println(elementName + ": " +counter);
+        //System.out.println(elementName + ": " +counter);
     }
     public void subCounter(){
         counter--;
-        System.out.println(elementName + ": " +counter);
+        //System.out.println(elementName + ": " +counter);
     }
     
-    public void setSliderLabeltext(String text){
-        jSliderLabel.setText(text);
+    public void setSliderValue(int value){
+        slidervalue = value;
+        jSliderLabel.setText(slidervalue + " %");
     }
     public JLabel getSliderLabel(){
         return jSliderLabel;
@@ -49,5 +51,9 @@ public class TLXElement {
     
     public String getName(){
         return elementName;
+    }
+    
+    public int getCounter(){
+        return counter;
     }
 }
