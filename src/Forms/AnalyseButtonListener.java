@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JSlider;
 
 /**
  *
@@ -18,31 +19,35 @@ public class AnalyseButtonListener implements ActionListener{
 
     private List<TLXButtonGroup> buttonGroups;
     private List<TLXElement> tlxElements;
+    private List<TLXElement> evaSlide;
     
     /*--- Singelton --------------------------*/
     private static AnalyseButtonListener instance;
     
-    public static AnalyseButtonListener getInstance (List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements) {
+    public static AnalyseButtonListener getInstance (List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements, List<TLXElement> evaSlide) {
         if (AnalyseButtonListener.instance == null) {
-          AnalyseButtonListener.instance = new AnalyseButtonListener(buttonGroups, tlxElements);
+          AnalyseButtonListener.instance = new AnalyseButtonListener(buttonGroups, tlxElements, evaSlide);
         }
         return AnalyseButtonListener.instance;
     }
-    private AnalyseButtonListener(List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements){  
+    private AnalyseButtonListener(List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements, List<TLXElement> evaSlide){  
         this.buttonGroups = buttonGroups;
         this.tlxElements = tlxElements;
+        this.evaSlide = evaSlide;
     }
     /*-----------------------------------------*/
     
     @Override
     public void actionPerformed(ActionEvent e) {
         //1. check if all groups have a selected Button
+        updateSliderValue();
         if(comparPanalComplet()){
             //TODO: 2. check if the user has used the slider-panal
             //TODO: Compair vergleich und Counter setzen
             setCounter();
             displayCounter();
             //TODO: set Slider value
+            
         }else{
             System.out.println("es wurden nicht alle Paare vergleichen");
         }
@@ -78,4 +83,21 @@ public class AnalyseButtonListener implements ActionListener{
             System.out.println(element.getName() + " " + element.getCounter());
         }
     }
+    
+    private void updateSliderValue(){
+       
+        for (TLXElement eva : evaSlide) {
+            String name = eva.getName();
+            System.out.println(eva.getName());
+             for (TLXElement ele : tlxElements){
+                 if(ele.getName().equalsIgnoreCase(name)){
+                    eva.getSlider().setValue(ele.getSlider().getValue());
+                    System.out.println("found");
+                 }
+             }
+             System.out.println(eva.getSlider().getValue());
+        }
+         
+    }
+    
 }

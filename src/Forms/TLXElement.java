@@ -17,6 +17,7 @@ public class TLXElement {
     private JSlider jSlider;
     private JLabel jSliderLabel;
     private String elementName;
+    //private JSlider evaSlider;
     //the Pair-wise comparisons of factors:
     private int counter;
     private int slidervalue;
