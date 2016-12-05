@@ -10,6 +10,7 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSlider;
+import javax.swing.JTable;
 
 /**
  *
@@ -120,6 +121,11 @@ public class TlxForm extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Forms/String_values"); // NOI18N
         jButton31.setText(bundle.getString("button_MD")); // NOI18N
         jButton31.setPreferredSize(new java.awt.Dimension(45, 45));
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 60, -1));
 
         jButton32.setText(bundle.getString("button_PD")); // NOI18N
@@ -413,6 +419,8 @@ public class TlxForm extends javax.swing.JFrame {
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
+                {"", null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -424,6 +432,7 @@ public class TlxForm extends javax.swing.JFrame {
                 "Rating", "Weight", "Product"
             }
         ));
+        jTable1.setRowHeight(34);
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -452,15 +461,15 @@ public class TlxForm extends javax.swing.JFrame {
                             .addComponent(eva_Slider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(eva_Slider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(eva_Slider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -491,8 +500,7 @@ public class TlxForm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton2)))
                 .addGap(0, 74, Short.MAX_VALUE))
         );
 
@@ -552,6 +560,10 @@ public class TlxForm extends javax.swing.JFrame {
     private void eva_Slider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_eva_Slider1StateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_eva_Slider1StateChanged
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton31ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -671,6 +683,8 @@ public class TlxForm extends javax.swing.JFrame {
     private List<TLXElement> evaSlider = new ArrayList<TLXElement>();
     private List<JSlider> eva1 = new ArrayList<JSlider>();
     
+    private JTable table;
+    
     private void setChangeListener(){
         SliderListener listener = SliderListener.getInstance(tlxElements);
         jSlider1.addChangeListener(listener);
@@ -712,7 +726,7 @@ public class TlxForm extends javax.swing.JFrame {
         jButton59.addActionListener(buttonListener);
         jButton60.addActionListener(buttonListener);
         
-        AnalyseButtonListener aButtonListener = AnalyseButtonListener.getInstance(buttonGroups, tlxElements, evaSlider);
+        AnalyseButtonListener aButtonListener = AnalyseButtonListener.getInstance(buttonGroups, tlxElements, evaSlider, jTable1);
         jButton1.addActionListener(aButtonListener);
     }
     
@@ -807,9 +821,5 @@ public class TlxForm extends javax.swing.JFrame {
         buttonGroups.add(group33);
         buttonGroups.add(group34);
         buttonGroups.add(group35);
-    }
-    
-
-    
-            
+    }         
 }

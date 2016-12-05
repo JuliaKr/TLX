@@ -8,8 +8,10 @@ package Forms;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.*;
 import javax.swing.JButton;
 import javax.swing.JSlider;
+import javax.swing.JTable;
 
 /**
  *
@@ -20,33 +22,40 @@ public class AnalyseButtonListener implements ActionListener{
     private List<TLXButtonGroup> buttonGroups;
     private List<TLXElement> tlxElements;
     private List<TLXElement> evaSlide;
+    private JTable table;
     
     /*--- Singelton --------------------------*/
     private static AnalyseButtonListener instance;
     
-    public static AnalyseButtonListener getInstance (List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements, List<TLXElement> evaSlide) {
+    public static AnalyseButtonListener getInstance (List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements, List<TLXElement> evaSlide, JTable table) {
         if (AnalyseButtonListener.instance == null) {
-          AnalyseButtonListener.instance = new AnalyseButtonListener(buttonGroups, tlxElements, evaSlide);
+          AnalyseButtonListener.instance = new AnalyseButtonListener(buttonGroups, tlxElements, evaSlide, table);
         }
         return AnalyseButtonListener.instance;
     }
-    private AnalyseButtonListener(List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements, List<TLXElement> evaSlide){  
+    private AnalyseButtonListener(List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements, List<TLXElement> evaSlide, JTable table){  
         this.buttonGroups = buttonGroups;
         this.tlxElements = tlxElements;
         this.evaSlide = evaSlide;
+        this.table = table;
     }
     /*-----------------------------------------*/
     
     @Override
     public void actionPerformed(ActionEvent e) {
         //1. check if all groups have a selected Button
-        updateSliderValue();
+        
+        
         if(comparPanalComplet()){
             //TODO: 2. check if the user has used the slider-panal
             //TODO: Compair vergleich und Counter setzen
             setCounter();
             displayCounter();
             //TODO: set Slider value
+            updateSliderValue();
+            //evaluation slider
+            setTable();
+            //evaluation table
             
         }else{
             System.out.println("es wurden nicht alle Paare vergleichen");
@@ -88,16 +97,64 @@ public class AnalyseButtonListener implements ActionListener{
        
         for (TLXElement eva : evaSlide) {
             String name = eva.getName();
-            System.out.println(eva.getName());
              for (TLXElement ele : tlxElements){
                  if(ele.getName().equalsIgnoreCase(name)){
                     eva.getSlider().setValue(ele.getSlider().getValue());
-                    System.out.println("found");
                  }
              }
              System.out.println(eva.getSlider().getValue());
         }
          
+    }
+    
+    public void setTable(){
+        
+        //Rating
+        int counter = 0;
+        for (TLXElement eva : evaSlide) {
+            String name = eva.getName();
+             for (TLXElement ele : tlxElements){
+                 if(ele.getName().equalsIgnoreCase(name)){
+                    eva.getSlider().setValue(ele.getSlider().getValue());
+                    int value = ele.getSlider().getValue();
+                    table.setValueAt(value, counter, 0);
+                    counter ++;
+              
+                 }
+             }
+             System.out.println(eva.getSlider().getValue());
+        }
+        
+         //Weight
+        int counter1 = 0;
+        for(TLXElement element : tlxElements){
+            int value1 = element.getCounter();
+            table.setValueAt(value1,counter1,1);
+            counter1 ++;
+        }
+        //Product
+        int counter2 = 0;
+        for (TLXElement eva : evaSlide) {
+            String name = eva.getName();
+             for (TLXElement ele : tlxElements){
+                 if(ele.getName().equalsIgnoreCase(name)){
+                    eva.getSlider().setValue(ele.getSlider().getValue());
+                    int valueRat = ele.getSlider().getValue();
+                    int valueWei = ele.getCounter();
+                    int valuePro =valueRat * valueWei;
+                    table.setValueAt(valuePro, counter2, 2);
+                    //summe[counter2] = valuePro;
+                    counter2 ++;
+                 }
+             }
+        }
+        
+        //Summe
+        //int[] summe = new int[6];
+        table.setValueAt("SUM", 7, 0);
+        table.setValueAt("WEIGHTS", 8, 0);
+        table.setValueAt("AVG", 9, 0);
+        
     }
     
 }
