@@ -9,7 +9,10 @@ import tlx.TLXElement;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.*;
 import javax.swing.JButton;
+import javax.swing.JSlider;
+import javax.swing.JTable;
 
 /**
  *
@@ -20,11 +23,13 @@ public class AnalyseButtonListener implements ActionListener{
     private List<TLXButtonGroup> buttonGroups;
     private List<TLXElement> tlxElements;
     private TLXForm form;
+    private JTable table;
     
     public AnalyseButtonListener(TLXForm form, List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements){  
         this.buttonGroups = buttonGroups;
         this.tlxElements = tlxElements;
         this.form = form;
+        this.table = form.getAnalysTable();
     }
     
     @Override
@@ -38,6 +43,10 @@ public class AnalyseButtonListener implements ActionListener{
             displayCounter();
             button.setEnabled(false);
             form.setAnalysePanelButtons(true);
+            //TODO: set Slider value
+            //evaluation slider
+            setTable();
+            //evaluation tabl
         }else{
             form.setAttentionLabelText("VERGLEICH: es wurden nicht alle Paare vergleichen");
         }
@@ -74,4 +83,42 @@ public class AnalyseButtonListener implements ActionListener{
             System.out.println(element.getName() + " " + element.getCounter());
         }
     }
+    
+    
+    public void setTable(){
+        
+        //Rating
+        int counter = 0;
+        for (TLXElement ele : tlxElements) {
+            int value = ele.getSliderValue();
+            table.setValueAt(value, counter, 0);
+            counter ++;                
+        }
+        
+         //Weight
+        int counter1 = 0;
+        for(TLXElement element : tlxElements){
+            int value1 = element.getCounter();
+            table.setValueAt(value1,counter1,1);
+            counter1 ++;
+        }
+        //Product
+        int counter2 = 0;
+        for (TLXElement ele : tlxElements){
+            int valueRat = ele.getSliderValue();
+            int valueWei = ele.getCounter();
+            int valuePro =valueRat * valueWei;
+            table.setValueAt(valuePro, counter2, 2);
+            //summe[counter2] = valuePro;
+            counter2 ++;
+        }
+        
+        //Summe
+        //int[] summe = new int[6];
+        table.setValueAt("SUM", 7, 0);
+        table.setValueAt("WEIGHTS", 8, 0);
+        table.setValueAt("AVG", 9, 0);
+        
+    }
+    
 }
