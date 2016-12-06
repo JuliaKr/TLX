@@ -91,15 +91,15 @@ public class AnalyseButtonListener implements ActionListener{
         int counter = 0;
         for (TLXElement ele : tlxElements) {
             int value = ele.getSliderValue();
-            table.setValueAt(value, counter, 0);
-            counter ++;                
+            table.setValueAt(value, counter, 1);
+            counter++;
         }
         
          //Weight
         int counter1 = 0;
         for(TLXElement element : tlxElements){
             int value1 = element.getCounter();
-            table.setValueAt(value1,counter1,1);
+            table.setValueAt(value1,counter1,2);
             counter1 ++;
         }
         //Product
@@ -108,16 +108,13 @@ public class AnalyseButtonListener implements ActionListener{
             int valueRat = ele.getSliderValue();
             int valueWei = ele.getCounter();
             int valuePro =valueRat * valueWei;
-            table.setValueAt(valuePro, counter2, 2);
+            table.setValueAt(valuePro, counter2, 3);
             //summe[counter2] = valuePro;
             counter2 ++;
         }
         
         //Summe
-        //int[] summe = new int[6];
-        table.setValueAt("SUM", 7, 0);
-        table.setValueAt("WEIGHTS", 8, 0);
-        table.setValueAt("AVG", 9, 0);
+
         
     }
     

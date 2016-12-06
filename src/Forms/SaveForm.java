@@ -122,6 +122,7 @@ public class SaveForm extends javax.swing.JFrame {
     
     public void setList(List<TLXElement> tlxElements){
         this.tlxElements = tlxElements;
+        System.out.print("list gesetzt: "+ this.tlxElements.size());
     }
     
     public void writeXMLFile(List<TLXElement> tlxElements, String path){

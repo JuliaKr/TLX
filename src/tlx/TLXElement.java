@@ -28,6 +28,7 @@ public class TLXElement {
         this.elementName = name;
         this.counter = 0;
         this.elementFullName = fullName;
+        setSliderValue();
     }
     
     public void addCounter(){
