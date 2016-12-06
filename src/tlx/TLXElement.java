@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Forms;
+package tlx;
 
 import javax.swing.JLabel;
 import javax.swing.JSlider;
@@ -17,15 +17,17 @@ public class TLXElement {
     private JSlider jSlider;
     private JLabel jSliderLabel;
     private String elementName;
+    private String elementFullName;
     //the Pair-wise comparisons of factors:
     private int counter;
     private int slidervalue;
     
-    public TLXElement(JSlider slider, JLabel sliderLabel, String name){
+    public TLXElement(JSlider slider, JLabel sliderLabel, String name, String fullName){
         this.jSlider = slider;
         this.jSliderLabel = sliderLabel;
         this.elementName = name;
         this.counter = 0;
+        this.elementFullName = fullName;
     }
     
     public void addCounter(){
@@ -37,8 +39,8 @@ public class TLXElement {
         //System.out.println(elementName + ": " +counter);
     }
     
-    public void setSliderValue(int value){
-        slidervalue = value;
+    public void setSliderValue(){       
+        slidervalue = jSlider.getValue();
         jSliderLabel.setText(slidervalue + " %");
     }
     public JLabel getSliderLabel(){
@@ -55,5 +57,13 @@ public class TLXElement {
     
     public int getCounter(){
         return counter;
+    }
+    
+    public String getFullName(){
+        return elementFullName;
+    }
+    
+    public int getSliderValue(){
+        return slidervalue;
     }
 }

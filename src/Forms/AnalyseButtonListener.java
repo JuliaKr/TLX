@@ -5,6 +5,7 @@
  */
 package Forms;
 
+import tlx.TLXElement;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -18,33 +19,27 @@ public class AnalyseButtonListener implements ActionListener{
 
     private List<TLXButtonGroup> buttonGroups;
     private List<TLXElement> tlxElements;
+    private TLXForm form;
     
-    /*--- Singelton --------------------------*/
-    private static AnalyseButtonListener instance;
-    
-    public static AnalyseButtonListener getInstance (List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements) {
-        if (AnalyseButtonListener.instance == null) {
-          AnalyseButtonListener.instance = new AnalyseButtonListener(buttonGroups, tlxElements);
-        }
-        return AnalyseButtonListener.instance;
-    }
-    private AnalyseButtonListener(List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements){  
+    public AnalyseButtonListener(TLXForm form, List<TLXButtonGroup> buttonGroups, List<TLXElement> tlxElements){  
         this.buttonGroups = buttonGroups;
         this.tlxElements = tlxElements;
+        this.form = form;
     }
-    /*-----------------------------------------*/
     
     @Override
     public void actionPerformed(ActionEvent e) {
         //1. check if all groups have a selected Button
+        JButton button = (JButton)e.getSource();
         if(comparPanalComplet()){
             //TODO: 2. check if the user has used the slider-panal
-            //TODO: Compair vergleich und Counter setzen
+            form.setAttentionLabelText("");
             setCounter();
             displayCounter();
-            //TODO: set Slider value
+            button.setEnabled(false);
+            form.setAnalysePanelButtons(true);
         }else{
-            System.out.println("es wurden nicht alle Paare vergleichen");
+            form.setAttentionLabelText("VERGLEICH: es wurden nicht alle Paare vergleichen");
         }
         
     }
@@ -69,6 +64,7 @@ public class AnalyseButtonListener implements ActionListener{
                     element.addCounter();
                     break;
                 }
+                //TODO: Set Slider value
             }
         }
     }

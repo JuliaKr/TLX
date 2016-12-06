@@ -5,7 +5,7 @@
  */
 package tlx;
 
-import Forms.TlxForm;
+import Forms.TLXForm;
 
 
 
@@ -20,10 +20,10 @@ public class TLX {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         //TlxForm form = new TlxForm();
+         //TlxForm form = new TLXForm();
          
          
-         TlxForm form = new TlxForm();
+         TLXForm form = new TLXForm();
          form.setVisible(true);
     }
     

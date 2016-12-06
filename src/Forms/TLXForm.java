@@ -5,6 +5,7 @@
  */
 package Forms;
 
+import tlx.TLXElement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -15,18 +16,22 @@ import javax.swing.JSlider;
  *
  * @author Julia
  */
-public class TlxForm extends javax.swing.JFrame {
+public class TLXForm extends javax.swing.JFrame {
 
     /**
      * Creates new form tlx_form
      */
-    public TlxForm() {
+    public TLXForm() {
+        createForm();
+    }
+
+    public void createForm(){
         initComponents();
         setChangeListener();
         fillTLXElementList();
         doButtonGroups();
+        setAnalysePanelButtons(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -95,6 +100,7 @@ public class TlxForm extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -351,9 +357,9 @@ public class TlxForm extends javax.swing.JFrame {
 
         jTabbedPane1.addTab(bundle.getString("tab_question"), jPanel3); // NOI18N
 
-        jButton2.setText(bundle.getString("button_Analyse")); // NOI18N
+        jButton2.setText(bundle.getString("button_NewStart")); // NOI18N
 
-        jButton3.setText(bundle.getString("button_Analyse")); // NOI18N
+        jButton3.setText(bundle.getString("button_save")); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -380,13 +386,17 @@ public class TlxForm extends javax.swing.JFrame {
 
         jButton1.setText(bundle.getString("button_Analyse")); // NOI18N
 
+        jLabel15.setForeground(new java.awt.Color(255, 0, 51));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
@@ -395,7 +405,9 @@ public class TlxForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -425,21 +437,23 @@ public class TlxForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TlxForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TLXForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TlxForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TLXForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TlxForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TLXForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TlxForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TLXForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TlxForm().setVisible(true);
+                new TLXForm().setVisible(true);
             }
         });
     }
@@ -484,6 +498,7 @@ public class TlxForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -510,7 +525,7 @@ public class TlxForm extends javax.swing.JFrame {
     private List<TLXElement> tlxElements = new ArrayList<TLXElement>();
     
     private void setChangeListener(){
-        SliderListener listener = SliderListener.getInstance(tlxElements);
+        SliderListener listener = new SliderListener(tlxElements);
         jSlider1.addChangeListener(listener);
         jSlider2.addChangeListener(listener);
         jSlider3.addChangeListener(listener);
@@ -518,7 +533,7 @@ public class TlxForm extends javax.swing.JFrame {
         jSlider7.addChangeListener(listener);
         jSlider8.addChangeListener(listener);
         
-        ComparButtonListener buttonListener = ComparButtonListener.getInstance(buttonGroups);
+        ComparButtonListener buttonListener = new ComparButtonListener(buttonGroups);
         jButton31.addActionListener(buttonListener);
         jButton32.addActionListener(buttonListener);
         jButton33.addActionListener(buttonListener);
@@ -550,8 +565,14 @@ public class TlxForm extends javax.swing.JFrame {
         jButton59.addActionListener(buttonListener);
         jButton60.addActionListener(buttonListener);
         
-        AnalyseButtonListener aButtonListener = AnalyseButtonListener.getInstance(buttonGroups, tlxElements);
+        AnalyseButtonListener aButtonListener = new AnalyseButtonListener(this, buttonGroups, tlxElements);
         jButton1.addActionListener(aButtonListener);
+        
+        NewStartButtonListener nButtonListener = new NewStartButtonListener(this);
+        jButton2.addActionListener(nButtonListener);
+        
+        SaveButtonListener sButtonListener = new SaveButtonListener(tlxElements);
+        jButton3.addActionListener(sButtonListener);
     }
     
     private void fillTLXElementList(){
@@ -559,12 +580,12 @@ public class TlxForm extends javax.swing.JFrame {
         the List contains all TLXElements
         the TLXElements keeps all Formeelements of each part together
         */
-        TLXElement md = new TLXElement(jSlider1, jLabel9, "md");
-        TLXElement pd = new TLXElement(jSlider2, jLabel10, "pd");
-        TLXElement td = new TLXElement(jSlider3, jLabel12, "td");
-        TLXElement op = new TLXElement(jSlider4, jLabel11, "op");
-        TLXElement ef = new TLXElement(jSlider7, jLabel13, "ef");
-        TLXElement fr = new TLXElement(jSlider8, jLabel14, "fr");
+        TLXElement md = new TLXElement(jSlider1, jLabel9, "md", "mental_demand");
+        TLXElement pd = new TLXElement(jSlider2, jLabel10, "pd", "physical_demand");
+        TLXElement td = new TLXElement(jSlider3, jLabel12, "td", "temporal_demand");
+        TLXElement op = new TLXElement(jSlider4, jLabel11, "op", "performance");
+        TLXElement ef = new TLXElement(jSlider7, jLabel13, "ef", "effort");
+        TLXElement fr = new TLXElement(jSlider8, jLabel14, "fr", "frustration");
         
         tlxElements.add(md);
         tlxElements.add(pd);
@@ -615,5 +636,13 @@ public class TlxForm extends javax.swing.JFrame {
         buttonGroups.add(group34);
         buttonGroups.add(group35);
     }
-            
+    
+    public void setAttentionLabelText(String text){
+        jLabel15.setText(text);
+    }
+          
+    public void setAnalysePanelButtons(boolean visibility){
+        jButton3.setEnabled(visibility);
+        jButton2.setEnabled(visibility);
+    }
 }

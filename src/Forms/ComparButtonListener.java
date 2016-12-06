@@ -25,20 +25,10 @@ import javax.swing.event.ChangeListener;
 public class ComparButtonListener implements ActionListener{
 
     private List<TLXButtonGroup> buttonGroups;
-    /*--- Singelton --------------------------*/
-    private static ComparButtonListener instance;
-    
-    public static ComparButtonListener getInstance (List<TLXButtonGroup> buttonGroups) {
-        if (ComparButtonListener.instance == null) {
-          ComparButtonListener.instance = new ComparButtonListener(buttonGroups);
-        }
-        return ComparButtonListener.instance;
-    }
-    private ComparButtonListener(List<TLXButtonGroup> buttonGroups){  
+   
+    public ComparButtonListener(List<TLXButtonGroup> buttonGroups){  
         this.buttonGroups = buttonGroups;
-
     }
-    /*-----------------------------------------*/
 
     @Override
     public void actionPerformed(ActionEvent e) {
