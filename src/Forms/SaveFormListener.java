@@ -33,22 +33,29 @@ public class SaveFormListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         JFileChooser fileChooser = (JFileChooser)e.getSource();
+        //System.out.println(fileChooser);
+        //System.out.println(fileChooser.getFileFilter().getDescription());
         if(fileChooser.getDialogType() == 1){
             String path = fileChooser.getSelectedFile().getPath();
-            /*
-            try {
+            if(fileChooser.getFileFilter().getDescription().equalsIgnoreCase("xml files (*.xml)")){
+                //get xml-file
                 XMLWriter writer = new XMLWriter(tlxElements, path);
-            } catch (TransformerException ex) {
-                Logger.getLogger(SaveFormListener.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            */
-            CSVWriter csvWriter = new CSVWriter(tlxElements, path);
-            try {
-                csvWriter.writeCSVFile();
-            } catch (IOException ex) {
-                Logger.getLogger(SaveFormListener.class.getName()).log(Level.SEVERE, null, ex);
+                try {
+                    writer.writeXML();
+                } catch (TransformerException ex) {
+                    Logger.getLogger(SaveFormListener.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }else{
+                //standard: get csv-file
+                CSVWriter csvWriter = new CSVWriter(tlxElements, path);
+                try {
+                    csvWriter.writeCSVFile();
+                } catch (IOException ex) {
+                    Logger.getLogger(SaveFormListener.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
+        
     }
     
 }

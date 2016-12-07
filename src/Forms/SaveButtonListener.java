@@ -38,8 +38,10 @@ public class SaveButtonListener implements ActionListener{
        JFileChooser fileChooser = new JFileChooser();           
        SaveFormListener sListener = new SaveFormListener(tlxElements);
        fileChooser.addActionListener(sListener);
-       FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter("xml files (*.xml)", "xml");
-       fileChooser.setFileFilter(xmlfilter);
+       FileNameExtensionFilter xmlFilter = new FileNameExtensionFilter("xml files (*.xml)", "xml");
+       FileNameExtensionFilter csvFilter = new FileNameExtensionFilter("csv files", "csv");
+       fileChooser.setFileFilter(xmlFilter);
+       fileChooser.setFileFilter(csvFilter);
        int rueckgabewert = fileChooser.showSaveDialog(null);
        
     }

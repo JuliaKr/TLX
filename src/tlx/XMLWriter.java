@@ -34,13 +34,10 @@ public class XMLWriter {
     private List<TLXElement> tlxElements;
     private String path;
     
-    public XMLWriter (List<TLXElement> tlxElements, String path) throws TransformerException{
+    public XMLWriter (List<TLXElement> tlxElements, String path){
         this.tlxElements = tlxElements;
         this.path = path;
-        //TODO: tlxElements wird nicht gesetzt
-        System.out.println(tlxElements.size());
         checkPathString();
-        writeXML();
     }
     
     private void checkPathString(){
