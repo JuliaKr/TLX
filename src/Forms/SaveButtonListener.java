@@ -5,12 +5,16 @@
  */
 package Forms;
 import tlx.XMLWriter;
+import Forms.SaveFormListener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.AbstractAction;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.transform.TransformerException;
 import tlx.TLXElement;
 
@@ -28,15 +32,15 @@ public class SaveButtonListener implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       SaveForm saveform = new SaveForm();
-       saveform.setList(tlxElements);
-        /* 
-        XMLWriter writer = new XMLWriter(tlxElements);
-        try {
-            writer.writeXML();
-        } catch (TransformerException ex) {
-            Logger.getLogger(SaveButtonListener.class.getName()).log(Level.SEVERE, null, ex);
-        }
-*/
+       //System.out.println(e.getSource());
+       //System.out.println(e.getActionCommand());
+       //System.out.println(e.getID());
+       JFileChooser fileChooser = new JFileChooser();           
+       SaveFormListener sListener = new SaveFormListener(tlxElements);
+       fileChooser.addActionListener(sListener);
+       FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter("xml files (*.xml)", "xml");
+       fileChooser.setFileFilter(xmlfilter);
+       int rueckgabewert = fileChooser.showSaveDialog(null);
+       
     }
 }

@@ -373,6 +373,11 @@ public class TLXForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(227, 227, 227)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel14)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1)
@@ -384,10 +389,7 @@ public class TLXForm extends javax.swing.JFrame {
                                 .addGap(27, 27, 27)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
-                                    .addComponent(jLabel9))))
-                        .addContainerGap(12, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)))
                             .addComponent(jLabel3)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -401,13 +403,8 @@ public class TLXForm extends javax.swing.JFrame {
                                 .addGap(27, 27, 27)
                                 .addComponent(jLabel13))
                             .addComponent(jLabel8)
-                            .addComponent(jSlider8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(227, 227, 227)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel14))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(jSlider8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -742,9 +739,9 @@ private List<TLXButtonGroup> buttonGroups = new ArrayList<TLXButtonGroup>();
         the List contains all TLXElements
         the TLXElements keeps all Formeelements of each part together
         */
-        TLXElement md = new TLXElement(jSlider1, jLabel9, "md", "mental_demand");
-        TLXElement pd = new TLXElement(jSlider2, jLabel10, "pd", "physical_demand");
-        TLXElement td = new TLXElement(jSlider3, jLabel12, "td", "temporal_demand");
+        TLXElement md = new TLXElement(jSlider1, jLabel9, "md", "mental demand");
+        TLXElement pd = new TLXElement(jSlider2, jLabel10, "pd", "physical demand");
+        TLXElement td = new TLXElement(jSlider3, jLabel12, "td", "temporal demand");
         TLXElement op = new TLXElement(jSlider4, jLabel11, "op", "performance");
         TLXElement ef = new TLXElement(jSlider7, jLabel13, "ef", "effort");
         TLXElement fr = new TLXElement(jSlider8, jLabel14, "fr", "frustration");

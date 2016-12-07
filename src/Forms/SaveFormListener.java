@@ -4,12 +4,18 @@
  * and open the template in the editor.
  */
 package Forms;
+import tlx.XMLWriter;
+import tlx.CSVWriter;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import javax.xml.transform.TransformerException;
 import tlx.TLXElement;
 
 /**
@@ -18,20 +24,30 @@ import tlx.TLXElement;
  */
 public class SaveFormListener implements ActionListener{
 
-    private SaveForm form;
+    private List<TLXElement> tlxElements;
     
-    public SaveFormListener(SaveForm form){
-        this.form = form;
+    public SaveFormListener(List<TLXElement> tlxElements){
+        this.tlxElements = tlxElements;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("etwas gedrückt " + e.getSource());
         JFileChooser fileChooser = (JFileChooser)e.getSource();
         if(fileChooser.getDialogType() == 1){
             String path = fileChooser.getSelectedFile().getPath();
-            form.writeXMLFile(form.getList(), path);
-            
+            /*
+            try {
+                XMLWriter writer = new XMLWriter(tlxElements, path);
+            } catch (TransformerException ex) {
+                Logger.getLogger(SaveFormListener.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            */
+            CSVWriter csvWriter = new CSVWriter(tlxElements, path);
+            try {
+                csvWriter.writeCSVFile();
+            } catch (IOException ex) {
+                Logger.getLogger(SaveFormListener.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     

@@ -52,6 +52,11 @@ public class XMLWriter {
         System.out.println(path );
     }
     
+    private String checkSpace(String word){
+        word = word.replaceAll(" ", "_");
+        return word;
+    }
+    
     public void writeXML() throws TransformerConfigurationException, TransformerException{
         try{
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -64,7 +69,7 @@ public class XMLWriter {
 
             
             for(TLXElement element : tlxElements){
-                Element docElement = doc.createElement(element.getFullName());
+                Element docElement = doc.createElement(checkSpace(element.getFullName()));
                 
                 Element docElementChild1 = doc.createElement("pair-wise_factor");
                 docElementChild1.appendChild(doc.createTextNode(String.valueOf(element.getCounter())));
