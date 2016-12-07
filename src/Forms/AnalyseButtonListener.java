@@ -87,6 +87,15 @@ public class AnalyseButtonListener implements ActionListener{
     
     public void setTable(){
         
+        int[] summe;
+        summe = new int[6];
+        int[] weights;
+        weights = new int[6];
+        int valueSumme = 0;
+        int valueWeights = 0;
+        double avg = 0;
+        
+        
         //Rating
         int counter = 0;
         for (TLXElement ele : tlxElements) {
@@ -109,13 +118,21 @@ public class AnalyseButtonListener implements ActionListener{
             int valueWei = ele.getCounter();
             int valuePro =valueRat * valueWei;
             table.setValueAt(valuePro, counter2, 3);
-            //summe[counter2] = valuePro;
+            summe[counter2] = valueRat;
+            weights[counter2] = valueWei;
             counter2 ++;
         }
+        for (int i = 0; i < 6; i++){
+            valueSumme = valueSumme + summe[i];
+            valueWeights = valueWeights + weights[i];
+        }
         
-        //Summe
+        avg = (valueSumme/valueWeights);
+        form.setSumValue(valueSumme);
+        form.setWeightValue(valueWeights);
+        form.setAVGValue(avg);
 
-        
+ 
     }
     
 }
